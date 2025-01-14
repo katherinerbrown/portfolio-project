@@ -40,3 +40,24 @@
 .read-the-docs {
   color: #888;
 }
+
+body {
+  background-color: silver;
+}
+.Header {
+  color: rgb(13, 66, 134);
+  text-align: center;
+}
+
+h5 {
+  color: rgb(14, 23, 111);
+}
+#project {
+  text-align: left;
+}
+#Heading3 {
+  text-align: left;
+}
+#description {
+  text-align: left;
+}
