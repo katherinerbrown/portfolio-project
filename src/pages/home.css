@@ -1,0 +1,59 @@
+.homePage {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .homePage h1 {
+    font-size: 3.5rem; /* Larger, bolder title */
+    font-weight: bold;
+    color: #81d4fa; /* Light blue accent */
+    margin-bottom: 1rem;
+  }
+  
+  .homePage h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    color: #bdbdbd; /* Slightly lighter gray */
+  }
+  
+  .homePage h5 {
+    font-size: 1.25rem;
+    color: #9e9e9e; /* Subtle light gray */
+    margin-bottom: 2rem;
+  }
+  
+  .homePage-container {
+    text-align: center;
+  }
+  
+  .cta-button {
+    margin-top: 1.5rem;
+    padding: 1rem 2rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    background-color: #a5def9;/* Light blue */
+    color: #121212; /* Dark text on button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .cta-button:hover {
+    background-color: #c6edff; /* Slightly brighter blue on hover */
+    transform: scale(1.05); /* Subtle zoom */
+  }
+  
+  /* Add spacing between items */
+  .homePage h1, .homePage h2, .homePage h5, .cta-button {
+    margin: 1rem 0;
+  }
+  

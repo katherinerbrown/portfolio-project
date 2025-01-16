@@ -1,34 +1,62 @@
-/* We can design the ids or classes for the navbar here */
+/* Navbar styles */
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    top: 0;
-    width: 100%;
-    z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%; /* Full width of the viewport */
+  padding: 2vh 5vw; /* Vertical and horizontal padding */
+  background-color: #121212; /* Dark background */
+  box-shadow: 0 2vh 4vh rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+#name {
+  display: flex;
+  align-items: center;
+  font-size: 2.5vw; /* Scales with screen width */
+  font-weight: bold;
+  color: #81d4fa; /* Light blue text */
+}
+
+.brain-icon {
+  margin-left: 1vw; /* Space between name and icon */
+  color: #4fc3f7; /* Brighter blue for the icon */
+  font-size: 2.5vw; /* Icon size matches text size */
+}
+
+#navbar {
+  display: flex;
+  gap: 3vw; /* Space between navbar links */
+  list-style: none;
+}
+
+#navbar li a {
+  text-decoration: none;
+  font-size: 1.8vw; /* Responsive font size */
+  font-weight: 500;
+  color: #e0e0e0; /* Light text color */
+  transition: color 0.3s;
+}
+
+#navbar li a:hover {
+  color: #81d4fa; /* Light blue on hover */
+}
+
+/* Make the navbar stack on smaller screens */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 2vh;
   }
-  
-  #name {
-    margin-left: 30px;
-    font-size: 40px;
-  }
-  
+
   #navbar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 30px;
+    flex-direction: column;
   }
-  
-  #navbar li {
-    list-style: none;
-    padding: 0 15px;
-    position: relative;
+
+  #name {
+    font-size: 4vw;
   }
-  
-  #navbar li a {
-    text-decoration: none;
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: black;
+
+  .brain-icon {
+    font-size: 4vw;
   }
+}

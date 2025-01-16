@@ -1,0 +1,67 @@
+/* Root styles for consistency in the project page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9; /* Light background for better readability */
+    color: #333; /* Neutral text color */
+}
+
+#projtitle {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #0056b3; /* Accent color for title */
+}
+
+/* Container for the entire projects section */
+.project-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #ffffff; /* White background for each project block */
+    border: 1px solid #e0e0e0; /* Subtle border for structure */
+    border-radius: 0px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for elevation */
+}
+
+/* Project name styles */
+.projName {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+/* Project date styles */
+.projDate {
+    font-size: 1rem;
+    font-style: italic;
+    color: #777;
+    margin-bottom: 1rem;
+}
+
+/* Project description styles */
+.projDescription {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+/* Link styles */
+a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Add spacing between successive projects */
+.project-container + .project-container {
+    margin-top: 2rem;
+}
