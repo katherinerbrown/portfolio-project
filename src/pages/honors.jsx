@@ -3,14 +3,25 @@ import './honors.css'
 function Honors(){
     return(
         <>
+        <h3 className="sectionTitle">Awards</h3>
         <div className="achievements">
-        <h3>Highlights</h3>
         <ul>
-        <li>Research at MIT on computational neuroscience models.</li>
-        <li>Presented work at Polygence Symposium, 2023.</li>
-        <li>Proficient in Python, R, and MATLAB.</li>
+        <li>Oakdale High School - Valedictorian (Class of 2024).</li>
+        <li>American Association of University Women Scholar (ORE CHapter) </li>
+        <li>Jostens Scholar - 2022 </li>
+        <li>AP Scholar with Distinction (2023-2024) </li>
         </ul>
         </div>
+        <h3 className = "sectionTitle"> Skills </h3>
+
+        <div className="achievements">
+        <ul>
+        <li>Proficient in Pythonn & Java</li>
+        <li>Technical Writing - Medical Journalism & Medical Research </li>
+        </ul>
+        </div>
+        
+        
         </>
     )
 }

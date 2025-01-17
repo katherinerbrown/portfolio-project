@@ -8,6 +8,16 @@ function Projects() {
 
             <div className="project-container">
                 <h3 className="projName">
+                    This Shitty Portfolio
+                </h3>
+                <h4 className="projDate">January 2025 (work in progress pls be nice)</h4>
+                <p className="projDescription">
+                    Used VS Code in web development class through the JADE program to develop a portfolio project.
+                </p>
+            </div>
+
+            <div className="project-container">
+                <h3 className="projName">
                     Exploring Cognitive Bioplausibility of Computational Neuroscience Models
                 </h3>
                 <h4 className="projDate">July 2022 - September 2023</h4>

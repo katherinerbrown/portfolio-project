@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import NavigationBar from './navbar'
 import Projects from './pages/projects'
-import Home from "./pages/Home"
+import Home from "./pages/home"
 import Honors from "./pages/honors"
 import { Routes, Route, HashRouter } from "react-router-dom";
 
@@ -14,7 +14,7 @@ function App() {
     <>
       <HashRouter>
         <div>
-          <NavigationBar />
+          <NavigationBar></NavigationBar>
           <Routes>
             <Route path="/" element={<div className="homePage"><Home /></div>} />
             <Route path="/Home" element={<div className="homePage"><Home /></div>} />
@@ -28,7 +28,7 @@ function App() {
         </div>
       </HashRouter>
     </>
-  );
+  )
 }
 
 export default App;

@@ -3,51 +3,71 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: #0f1026;
 }
 
+:root {
+  --primary-gradient: linear-gradient(to bottom, var(--navy-accent), var(--background-color));
+  --perry-accent: #394b9d;
+  --navy-accent: #0f1638;
+  --berry-accent: #940641;
+  --green-accent: #78f0ae;
+  --text-color: #f2f2f2;
+  --light-color: #a2cfff;
+  --background-color: #0f1026;
+  --teal-accent: #23546c;
 
-/* Base styles for the app */
+}
+
+/* Base styles */
 body {
-  font-family: 'Roboto', sans-serif; /* Clean and modern font */
-  background-color: #f9f9f9; /* Light, neutral background */
-  color: #333; /* Dark, neutral text */
-  line-height: 1.6;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--primary-gradient);
+  color: var(--text-color);
+  overflow-x: hidden;
 }
 
 #root {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
-}
-
-
-/* Global heading styles */
-h1, h2, h3 {
-  color: #0056b3;
-  font-weight: bold;
+  padding: 1rem;
+  align-items: center;
 }
 
 h1 {
+  color: var(--light-color);
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
 }
 
 h2 {
+  color: var(--teal-accent);
   font-size: 2rem;
   margin-bottom: 0.75rem;
 }
 
 h3 {
+  color: var(--berry-accent);
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
 
-/* Page-specific sections */
-.homePage, .projectsPage {
-  padding: 2rem;
-  border-radius: 12px;
-  background: #ffffff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for elevation */
+h4 {
+  color: var(--green-accent);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+h5 {
+  color: var(--perry-accent);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  color: var(--text-color);
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
 }
 
 /* Footer Styles */
@@ -55,9 +75,10 @@ footer {
   text-align: center;
   margin-top: 2rem;
   padding: 1rem 0;
-  background-color: #0056b3;
-  color: #ffffff;
-  border-radius: 8px;
+  background-color: var(--navy-accent);
+  color: var(--light-color);
+  border-radius: 2px;
+  border-color: var(--teal-accent);
 }
 
 footer p {
@@ -67,17 +88,18 @@ footer p {
 
 /* Cards for Projects or Sections */
 .card {
-  background-color: #ffffff;
+  width: 100%; /* Full width of the screen */
   padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin-bottom: 1.5rem;
-  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: var(--background-color); /* Matches the darker background */
+  border-radius: 0; /* Optional: Remove rounded corners for edge-to-edge effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Optional: Subtle shadow */
+  align-items: center;
 }
+
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 12px var(--green-accent);
 }
 
 /* Responsive Design */

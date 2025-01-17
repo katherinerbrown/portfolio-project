@@ -1,25 +1,41 @@
 /* Navbar styles */
+:root {
+
+  --perry-accent: #394b9d;
+  --navy-accent: #0f1638;
+  --berry-accent: #940641;
+  --green-accent: #78f0ae;
+  --text-color: #f2f2f2;
+  --light-color: #a2cfff;
+  --background-color: #0f1026;
+  --teal-accent: #23546c;
+
+}
+
 nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%; /* Full width of the viewport */
-  padding: 2vh 5vw; /* Vertical and horizontal padding */
-  background-color: #121212; /* Dark background */
-  box-shadow: 0 2vh 4vh rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  background-color: var(--background-color); /* Dark background */
+  box-shadow: 0 2vh 4vh var(--navy-accent); /* Subtle shadow */
+  width: 88%;
+  padding: 2vh 0; /* Adjust padding if needed */  
+  
 }
+
 
 #name {
   display: flex;
   align-items: center;
   font-size: 2.5vw; /* Scales with screen width */
   font-weight: bold;
-  color: #81d4fa; /* Light blue text */
+  padding-left: 5%;
+  color: var(--light-color) /* Light blue text */
 }
 
 .brain-icon {
   margin-left: 1vw; /* Space between name and icon */
-  color: #4fc3f7; /* Brighter blue for the icon */
+  color: var(--teal-accent); /* Brighter blue for the icon */
   font-size: 2.5vw; /* Icon size matches text size */
 }
 
@@ -31,14 +47,16 @@ nav {
 
 #navbar li a {
   text-decoration: none;
-  font-size: 1.8vw; /* Responsive font size */
-  font-weight: 500;
-  color: #e0e0e0; /* Light text color */
+  font-size: 1.5vw; /* Responsive font size */
+  font-weight: 400;
+  color: var(--text-color); /* Light text color */
   transition: color 0.3s;
+  background-color: #0f1638;
+  padding-right: 5%;
 }
 
 #navbar li a:hover {
-  color: #81d4fa; /* Light blue on hover */
+  color: var(--light-color); /* Light blue on hover */
 }
 
 /* Make the navbar stack on smaller screens */
