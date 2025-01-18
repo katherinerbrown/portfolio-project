@@ -8,7 +8,6 @@ import Home from "./pages/home"
 import Honors from "./pages/honors"
 import { Routes, Route, HashRouter } from "react-router-dom";
 
-
 function App() {
   return (
     <>

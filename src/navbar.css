@@ -2,12 +2,12 @@
 :root {
 
   --perry-accent: #394b9d;
-  --navy-accent: #0f1638;
+  --navy-accent: #03030c;
   --berry-accent: #940641;
   --green-accent: #78f0ae;
   --text-color: #f2f2f2;
   --light-color: #a2cfff;
-  --background-color: #0f1026;
+  --background-color: #03030c;
   --teal-accent: #23546c;
 
 }
@@ -15,21 +15,19 @@
 nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   background-color: var(--background-color); /* Dark background */
+  max-width: 100%;
   box-shadow: 0 2vh 4vh var(--navy-accent); /* Subtle shadow */
-  width: 88%;
-  padding: 2vh 0; /* Adjust padding if needed */  
-  
+  justify-content: space-between; /* Push items to the edges */
+  padding-right: 5%;
 }
-
 
 #name {
   display: flex;
   align-items: center;
   font-size: 2.5vw; /* Scales with screen width */
   font-weight: bold;
-  padding-left: 5%;
+  background-color: var(--background-color);
   color: var(--light-color) /* Light blue text */
 }
 
@@ -41,8 +39,12 @@ nav {
 
 #navbar {
   display: flex;
-  gap: 3vw; /* Space between navbar links */
   list-style: none;
+  gap: 3vw; /* Space between navbar links */
+  align-items: right;
+  background-color: var(--background-color);
+  justify-content: space-between; /* Push items to the edges */
+
 }
 
 #navbar li a {
@@ -51,13 +53,17 @@ nav {
   font-weight: 400;
   color: var(--text-color); /* Light text color */
   transition: color 0.3s;
-  background-color: #0f1638;
+  background-color: var(--background-color);
   padding-right: 5%;
 }
 
 #navbar li a:hover {
   color: var(--light-color); /* Light blue on hover */
+  background-color: var(--background-color);
+
 }
+
+
 
 /* Make the navbar stack on smaller screens */
 @media (max-width: 768px) {

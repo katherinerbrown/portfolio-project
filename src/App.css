@@ -14,14 +14,14 @@
   --green-accent: #78f0ae;
   --text-color: #f2f2f2;
   --light-color: #a2cfff;
-  --background-color: #0f1026;
+  --background-color: #03030c;
   --teal-accent: #23546c;
 
 }
 
 /* Base styles */
 body {
-  width: 100%;
+  width: 100vw;
   font-family: 'Roboto', sans-serif;
   background-color: var(--primary-gradient);
   color: var(--text-color);
@@ -38,18 +38,23 @@ h1 {
   color: var(--light-color);
   font-size: 2.5rem;
   margin-bottom: .5rem;
+  background-color: var(--background-color);
 }
 
 h2 {
   color: var(--teal-accent);
   font-size: 2rem;
   margin-bottom: 0.75rem;
+  background-color: var(--background-color);
+
 }
 
 h3 {
   color: var(--berry-accent);
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
+  background-color: var(--background-color);
+
 }
 
 h4 {
@@ -62,6 +67,10 @@ h5 {
   color: var(--perry-accent);
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 p {
