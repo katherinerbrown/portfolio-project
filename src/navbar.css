@@ -31,12 +31,6 @@ nav {
   color: var(--light-color) /* Light blue text */
 }
 
-.brain-icon {
-  margin-left: 1vw; /* Space between name and icon */
-  color: var(--teal-accent); /* Brighter blue for the icon */
-  font-size: 2.5vw; /* Icon size matches text size */
-}
-
 #navbar {
   display: flex;
   list-style: none;
@@ -46,6 +40,7 @@ nav {
   justify-content: space-between; /* Push items to the edges */
 
 }
+
 
 #navbar li a {
   text-decoration: none;

@@ -1,6 +1,6 @@
 /* General reset for consistent styling */
 * {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
   background-color: #0f1026;
@@ -20,29 +20,54 @@
 }
 
 /* Base styles */
-body {
+
+/* Default page styles */
+.fullpage {
   width: 100vw;
-  font-family: 'Roboto', sans-serif;
-  background-color: var(--primary-gradient);
-  color: var(--text-color);
-  overflow-x: hidden;
+  max-width: 100%;
+  min-height: 100%;
+  background-color: var(--background-color);
+}
+
+.expPage {
+
+}
+
+.homePage{
+
+}
+
+.connectPage{
+
+}
+
+.achPage{
+
+}
+
+.aboutPage{
+
+}
+
+.pagetitle {
+  background-color: var(--berry-accent);
 }
 
 #root {
   margin: 0 auto;
-  padding: 1rem;
   align-items: center;
 }
 
 h1 {
   color: var(--light-color);
   font-size: 2.5rem;
+  font-family: 'Orbitron', serif;
   margin-bottom: .5rem;
   background-color: var(--background-color);
 }
 
 h2 {
-  color: var(--teal-accent);
+  color: var(--berry-accent);
   font-size: 2rem;
   margin-bottom: 0.75rem;
   background-color: var(--background-color);
@@ -61,12 +86,16 @@ h4 {
   color: var(--green-accent);
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
+  background-color: var(--background-color);
+
 }
 
 h5 {
   color: var(--perry-accent);
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
+  background-color: var(--background-color);
+
 }
 
 html {
@@ -83,32 +112,14 @@ p {
 footer {
   text-align: center;
   margin-top: 2rem;
-  padding: 1rem 0;
-  background-color: var(--navy-accent);
+  background-color: var(--background-color);
   color: var(--light-color);
-  border-radius: 2px;
   border-color: var(--teal-accent);
 }
 
 footer p {
   font-size: 1rem;
   margin: 0;
-}
-
-/* Cards for Projects or Sections */
-.card {
-  width: 100%; /* Full width of the screen */
-  padding: 1.5rem;
-  background-color: var(--background-color); /* Matches the darker background */
-  border-radius: 0; /* Optional: Remove rounded corners for edge-to-edge effect */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Optional: Subtle shadow */
-  align-items: center;
-}
-
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px var(--green-accent);
 }
 
 /* Responsive Design */

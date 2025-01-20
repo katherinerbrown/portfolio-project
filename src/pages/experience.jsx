@@ -1,9 +1,10 @@
-import './projects.css';
+import './experience.css';
 import proj1_abstract from './abstractproj1.pdf';
 
-function Projects() {
+function Experience() {
     return (
         <>
+        <div className='fullPage'>
             <h1 id="projtitle">Projects</h1>
 
             <div className="project-container">
@@ -41,8 +42,10 @@ function Projects() {
                 </p>
                 <a href="#">View Project (Link or PDF)</a>
             </div>
+        
+        </div>
         </>
     );
 }
 
-export default Projects;
+export default Experience;

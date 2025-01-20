@@ -1,10 +1,10 @@
-import './honors.css'
+import './achievements.css'
 
-function Honors(){
+function Achievements(){
     return(
         <>
         <h3 className="sectionTitle">Awards</h3>
-        <div className="achievements">
+        <div className="cardone">
         <ul>
         <li>Oakdale High School - Valedictorian (Class of 2024).</li>
         <li>American Association of University Women Scholar (ORE CHapter) </li>
@@ -14,7 +14,7 @@ function Honors(){
         </div>
         <h3 className = "sectionTitle"> Skills </h3>
 
-        <div className="achievements">
+        <div className="cardone">
         <ul>
         <li>Proficient in Pythonn & Java</li>
         <li>Technical Writing - Medical Journalism & Medical Research </li>
@@ -25,5 +25,5 @@ function Honors(){
         </>
     )
 }
-export default Honors
+export default Achievements
 

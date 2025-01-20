@@ -42,9 +42,5 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/katherinerbrown/portfolio-project/issues"
-  },
-
-  "scripts" :{
-  "build:css": "npx tailwindcss -i ./src/styles.css -o ./dist/styles.css --watch"
-}
+  }
 }
