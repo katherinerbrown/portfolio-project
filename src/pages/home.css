@@ -72,48 +72,54 @@ body {
         color: var(--light-color);
       }
 
-.about-section {
-  padding: 50px;
+.about-page {
   width: 100vw;
-  margin-top: 60vh; /* Push About section further down */
+  margin-top: 35vh; /* Push About section further down */
   min-height: 100vh;  /* Ensures that the About section takes at least the height of the screen */
   z-index: 1; 
   position: relative;
-  background-color: var(--background-color);
+  background: linear-gradient(to bottom, black, var(--background-color));
+  padding-top: 0;
 }
 
 #aboutme {
-  text-align: right;
-  margin-right: 10%;
-  font-size: 6rem;
+  text-align: left;
+  margin-left: 7%;
+  margin-top: 20%;
+  font-size: 11rem;
+  background: transparent;
 }
 
 /* Container for images */
 .image-container {
-  position: relative; /* To make child images position relative to this container */
+  position: relative;
   width: 100%; /* Ensure the container takes up full width */
-  height: 100vh; /* Set a height for the images container */
+  height: 200vh; /* Set a height for the images container */
+  background-color: var(--background-color);
+  margin: 0 auto;
 }
 
 /* Style for each image */
 .image {
   position: absolute; /* Position all images relative to the container */
   object-fit: cover;  /* Ensure images cover the area without distortion */
+  border-radius: 30px;
 }
 
 /* Back image (upper right-most) */
 .image.back {
   top: 0; /* Position at the top */
-  right: 0; /* Position at the right */
-  width: 40%;  /* Adjust the width of the image */
+  right: 8%; /* Position at the right */
   height: auto; /* Maintain aspect ratio */
   z-index: 1;  /* Set behind the middle image */
+  width: 25%; 
+  height: 40%;
 }
 
 /* Middle image */
 .image.middle {
-  top: 50%; /* Position in the middle vertically */
-  left: 50%; /* Position in the middle horizontally */
+  top: 35%; /* Position in the middle vertically */
+  left: 52%; /* Position in the middle horizontally */
   transform: translate(-50%, -50%); /* Adjust to center the image */
   width: 50%;  /* Adjust the width of the image */
   height: auto; /* Maintain aspect ratio */
@@ -122,27 +128,204 @@ body {
 
 /* Front image (bottom-left image) */
 .image.front {
-  bottom: 0; /* Position at the bottom */
-  left: 0;   /* Position at the left */
-  width: 40%;  /* Adjust the width of the image */
-  height: auto; /* Maintain aspect ratio */
+  bottom: 25%; /* Position at the bottom */
+  left: 7%;   /* Position at the left */
+  width: 25%; 
+  height: 30%; 
   z-index: 3;  /* Set it on top */
 }
 
+.about-nav {
+  margin-top: 70px; /* Position directly under #aboutme */
+  margin-left: 7%; /* Align with the left edge of #aboutme */
+  padding: 0;
+  text-align: left;
+  display: inline-block;
+  width: auto; /* Let the width adjust dynamically */
+  position: relative; /* Ensure it stays below the #aboutme title */
+  background-color: transparent;
+  box-shadow: none;
+}
 
+.about-nav ul {
+  list-style: none;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  display: block;
+  flex-direction: column; /* Stack the links vertically */
+  gap: 30px; /* Add spacing between items */
+}
 
+.about-nav li {
+  display: block;
+  text-align: left;
+  margin-top: 15px;
+}
 
+.about-nav a {
+  color: var(--text-color);
+  font-size: 2.5rem;
+  font-family: 'Oxanium', serif; 
+  text-transform: uppercase;          /* Make all text uppercase */
+  font-weight: 300; 
+  background-color: transparent;
+}
 
+.about-nav a:hover {
+  color: var(--berry-accent); /* Highlight on hover */
+  transform: scale(1.05); /* Add subtle hover effect */
+}
 
+#background {
+  position: absolute; /* Allows precise positioning */
+  bottom: 22%;
+  left: 40%; /* Align horizontally with the image */
+  font-size: 7rem; /* Adjust size if needed */
+  color: var(--text-color); /* Use your theme's text color */
+  z-index: 4;
+}
 
+.about-sections {
+  margin-top: 75vh;
+  width: 100vw;
+  background-color: var(--background-color);
+}
 
+section {
+  margin-top: 20px;
+  padding-top: 10px;
+  border: white;
+  border-width: 1px;
+  box-sizing: border-box;
+}
 
+section h2 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 7rem; /* Adjust size if needed */
+  color: var(--text-color); /* Use your theme's text color */
+  margin-left: 7%;
 
+}
 
+#temp {
+  font-size: 2rem;
+  margin-left: 1%;
+}
 
+#backgroundsec {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem; /* Space between rows */
+  margin: 0 auto; /* Center section horizontally */
+}
 
+/* Content blocks */
+.content-left,
+.content-right {
+  display: flex;
+  width: 100vw;
+  gap: 2rem; /* Space between text and image */
+  box-sizing: border-box; /* Include padding and border in total width/height */
+  height: 60vh;
+  align-items: center;
+}
 
+/* Content-left specific styles */
+.content-left {
+  flex-direction: row-reverse; /* Text on the left, image on the right */
+  justify-content: left;
+}
 
+.content-left .text {
+  margin-left: 7%;
+  margin-right: 40%;
+}
+.content-left .image {
+  margin-right: 0%;
+  margin-left: 67%;
+}
+.content-left .image img {
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+.content-right {
+  flex-direction: row; 
+  justify-content: rightt;
+}
+.content-right .text {
+  margin-right: 7%;
+  margin-left: 40%;
+}
+.content-right .image {
+  margin-left: 0%;
+  margin-right: 67%;
+}
+.content-right .image img {
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.text {
+  flex: 1;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Image block */
+.image {
+  flex: 1;
+  height: auto;
+  max-width: 40%;
+}
+
+.image img {
+  max-width: 100%; /* Keep image responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.image p {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #555; /* Subtle text color */
+}
+
+#transition-blurb {
+  margin-left: 7%;
+  margin-right: 7%;
+  text-align: center;
+}
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .content-left,
+  .content-right {
+    flex-direction: column; /* Stack text and image vertically */
+    text-align: center;
+  }
+
+  .text,
+  .image {
+    flex: unset; /* Remove equal spacing for smaller screens */
+  }
+}
+  #education {
+
+  }
+
+  #involvements{
+
+  }
+
+  #skills{
+
+  }
+
+  #interests{
+
+  }
 
 
 

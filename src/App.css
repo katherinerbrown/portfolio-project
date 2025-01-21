@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Oxanium:wght@200..800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Oxanium:wght@200..800&family=Space+Grotesk:wght@300..700&display=swap');
 * {
   margin: 0 auto;
   padding: 0;
@@ -111,8 +109,10 @@ html {
 
 p {
   color: var(--text-color);
-  font-size: 1rem;
+  font-size: 1.65rem;
   margin-bottom: 0.25rem;
+  font-family: "Space Grotesk", serif;
+  font-weight: 400;
 }
 
 /* Footer Styles */
@@ -122,7 +122,7 @@ footer {
   color: var(--text-color);  /* Text color for footer */
   text-align: center;
   padding: 20px;
-  position: relative;
+  position: bottom;
   z-index: 1;
   margin-top: auto;  /* This ensures footer stays at the bottom if content is shorter than the viewport */
 }
