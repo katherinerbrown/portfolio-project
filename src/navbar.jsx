@@ -1,4 +1,5 @@
 import './navbar.css'
+import { Link } from 'react-router-dom';
 
 function NavigationBar(){
     return(
@@ -7,11 +8,11 @@ function NavigationBar(){
 			   <h1 id="name">Katherine Brown </h1>
 					     <div>
 					          <ul id = "navbar">
-					               <li><a href="#/Home">Home</a> </li>
-								   <li><a href="#/About">About</a></li>
-					               <li><a href="#/Experience">Experience</a></li>
-								   <li><a href="#/Achievements">Achievements</a></li>
-								   <li><a href="#/Connect">Connect</a></li>
+							  	<li><Link to="/">Home</Link></li>
+								<li><Link to="#about">About</Link></li>
+								<li><Link to="/experience">Experience</Link></li>
+								<li><Link to="/achievements">Achievements</Link></li>
+								<li><Link to="/connect">Connect</Link></li>
 					          </ul>
 					     </div>
 					    </nav>

@@ -1,15 +1,16 @@
-/* General reset for consistent styling */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Oxanium:wght@200..800&display=swap');
+
 * {
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
-  background-color: #0f1026;
+  --background-color: #03030c;
+  scroll-behavior: smooth;
 }
 
 :root {
-  --primary-gradient: linear-gradient(to bottom, var(--navy-accent), var(--background-color));
   --perry-accent: #394b9d;
-  --navy-accent: #0f1638;
   --berry-accent: #940641;
   --green-accent: #78f0ae;
   --text-color: #f2f2f2;
@@ -23,10 +24,19 @@
 
 /* Default page styles */
 .fullpage {
-  width: 100vw;
   max-width: 100%;
   min-height: 100%;
   background-color: var(--background-color);
+  display: flex;             /* Enable flexbox for centering */
+  flex-direction: column; 
+
+  justify-content: flex-start;   /* Horizontally center children */
+  align-items: center;       /* Vertically center children */
+  height: 100vh;             /* Full viewport height */
+  width: 100vw;              /* Full viewport width */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
 }
 
 .expPage {
@@ -49,9 +59,6 @@
 
 }
 
-.pagetitle {
-  background-color: var(--berry-accent);
-}
 
 #root {
   margin: 0 auto;
@@ -59,25 +66,25 @@
 }
 
 h1 {
-  color: var(--light-color);
-  font-size: 2.5rem;
-  font-family: 'Orbitron', serif;
-  margin-bottom: .5rem;
-  background-color: var(--background-color);
+  color: var(--text-color);
+  font-size: 5.0rem;
+  font-family: 'Oxanium', serif; 
+  text-transform: uppercase;          /* Make all text uppercase */
+  font-weight: 300; 
 }
 
 h2 {
-  color: var(--berry-accent);
-  font-size: 2rem;
-  margin-bottom: 0.75rem;
-  background-color: var(--background-color);
-
+  color: var(--light-color);
+  font-size: 2.0rem;
+  font-family: 'Oxanium', serif; 
+  text-transform: uppercase;          /* Make all text uppercase */
+  font-weight: 400; 
 }
 
 h3 {
-  color: var(--berry-accent);
+  color: var(--teal-accent);
+  font-family: 'Space Grotesk', serif;
   font-size: 1.5rem;
-  margin-bottom: 0.5rem;
   background-color: var(--background-color);
 
 }
@@ -110,11 +117,14 @@ p {
 
 /* Footer Styles */
 footer {
+  width: 100%;
+  background-color: var(--background-color); /* Black background for footer */
+  color: var(--text-color);  /* Text color for footer */
   text-align: center;
-  margin-top: 2rem;
-  background-color: var(--background-color);
-  color: var(--light-color);
-  border-color: var(--teal-accent);
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+  margin-top: auto;  /* This ensures footer stays at the bottom if content is shorter than the viewport */
 }
 
 footer p {

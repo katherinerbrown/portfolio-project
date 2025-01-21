@@ -3,14 +3,9 @@ import './about.css'
 function About(){
     return(
         <> 
-        <div className='fullpage'> 
         
-        
-        <p> text goes here </p>
-        
-        
-        
-        </div>     
+        <p>consider this an error code!!!</p>
+
         </>
     )
 }

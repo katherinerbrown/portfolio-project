@@ -1,8 +1,8 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Poppins:wght@300;500;700&family=Roboto+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Oxanium:wght@200..800&family=Space+Grotesk:wght@300..700&display=swap');
 
 :root {
-  --primary-gradient: linear-gradient(to bottom, var(--background-color), var(--navy-accent));
   --perry-accent: #394b9d;
   --navy-accent: #0f1638;
   --berry-accent: #940641;
@@ -19,10 +19,135 @@ body {
   overflow-x: hidden;
 }
 
-.crown-icon {
-  width: 500px;
+.homePage {
+  display: flex;             /* Enable flexbox for centering */
+  flex-direction: column; 
+  justify-content: flex-start;   /* Horizontally center children */
+  align-items: center;       /* Vertically center children */
+  height: 100vh;             /* Full viewport height */
+  width: 100vw;              /* Full viewport width */
+  margin: 0;
+  padding: 50px 0 0 0;
+  box-sizing: border-box;
+
+  background-image: url('public/homeBG.png'); /* Path to your image */
+  background-attachment: fixed;      /* Parallax effect */
+  background-position: center bottom; /* Center the image */
+  background-size: cover;           /* Ensure the image covers the whole area */
+  background-repeat: no-repeat;     /* Avoid repeating the image */
+  z-index: -1;  
+  max-height: 100vh; 
 }
-.custom-icon:hover {
+
+.nameBox {
+  align-items: center;
+  text-align: center;
+  width: 80%;                /* Span 80% of the page width */
+  padding: 10px;             /* Optional: Add some inner spacing */
+  box-sizing: border-box;
+  padding-top: 50px;
+  margin-top: 50px;
+  position: relative;
+  z-index: 1; 
+}
+      #firstName {
+        color: var(--text-color);
+        font-size: 9rem;
+        font-weight: 300;
+        margin-bottom: 0 auto;
+      }
+      #lastName {
+        color: #281f8d;
+        font-size: 9rem;
+        font-weight: 300;
+        margin-bottom: 0 auto;
+
+      }
+      #description {
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin-top: 10px;
+        font-family: 'Space Grotesk', 'serif';
+        color: var(--light-color);
+      }
+
+.about-section {
+  padding: 50px;
+  width: 100vw;
+  margin-top: 60vh; /* Push About section further down */
+  min-height: 100vh;  /* Ensures that the About section takes at least the height of the screen */
+  z-index: 1; 
+  position: relative;
+  background-color: var(--background-color);
+}
+
+#aboutme {
+  text-align: right;
+  margin-right: 10%;
+  font-size: 6rem;
+}
+
+/* Container for images */
+.image-container {
+  position: relative; /* To make child images position relative to this container */
+  width: 100%; /* Ensure the container takes up full width */
+  height: 100vh; /* Set a height for the images container */
+}
+
+/* Style for each image */
+.image {
+  position: absolute; /* Position all images relative to the container */
+  object-fit: cover;  /* Ensure images cover the area without distortion */
+}
+
+/* Back image (upper right-most) */
+.image.back {
+  top: 0; /* Position at the top */
+  right: 0; /* Position at the right */
+  width: 40%;  /* Adjust the width of the image */
+  height: auto; /* Maintain aspect ratio */
+  z-index: 1;  /* Set behind the middle image */
+}
+
+/* Middle image */
+.image.middle {
+  top: 50%; /* Position in the middle vertically */
+  left: 50%; /* Position in the middle horizontally */
+  transform: translate(-50%, -50%); /* Adjust to center the image */
+  width: 50%;  /* Adjust the width of the image */
+  height: auto; /* Maintain aspect ratio */
+  z-index: 2;  /* Set it above the back image */
+}
+
+/* Front image (bottom-left image) */
+.image.front {
+  bottom: 0; /* Position at the bottom */
+  left: 0;   /* Position at the left */
+  width: 40%;  /* Adjust the width of the image */
+  height: auto; /* Maintain aspect ratio */
+  z-index: 3;  /* Set it on top */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+custom-icon:hover {
   transform: scale(1.1); /* Slightly enlarge on hover */
   filter: drop-shadow(4px 8px 10px var(--green-accent));
 }
