@@ -86,7 +86,71 @@ function Home(){
 
       <section id="education">
         <h2>Education</h2>
-        <p id = "temp" >This is the education section. Add your content here.</p>
+
+        <div className = "columbia-section"> 
+          <div className = "college">
+          <h3 id = "school"> Columbia University </h3>
+          <h5 id = "subschool"> The Fu Foundational School of Engineering and Applied Science </h5>
+          <h5 id = "subschool"> SEAS Class of 2028 </h5>
+
+          
+          <h4 id = "ed"> Major </h4>
+          <h5> Biomedical Engineering B.S.</h5>
+
+          <h4 id = "ed"> Concentration </h4>
+          <h5> Neural Engineering </h5>
+
+          <h4 id = "ed"> Minor </h4>
+          <h5> Entrepreneurship & Innovation </h5>
+          </div>
+
+          <div className = "photo">
+          <img src="public/uploads/campus.jpg" alt="Low Library at Columbia Univeristy" />
+          <h5 id = "nyc"> New York City, New York </h5>
+          </div>
+        </div>
+
+
+        <div id = "course-break"> <h2 id = "coursework-head"> University Coursework </h2> </div>
+
+        <div className = "coursework">
+        <div className = "term" id = "term1">
+          <h4> Fall Semester 2024 </h4>
+          <h5> term 1, 20 credits completed </h5>
+          
+          <p> General Chemistry I</p>
+          <p> Introduction to Mechanics & Thermodynamics</p>
+          <p> Multivariable Calculus for Engineers and Applied Scientists</p>
+          <p> Principles of Economics </p>
+          <p> University Writing</p>
+        
+        </div>
+        <div className = "term" id = "term2">
+          <h4> Spring Semester 2025 </h4>
+          <h5> term 2, 21 credits in progress </h5>
+
+          <p> General Chemistry II</p>
+          <p> Introduction to Electricity, Magnetism, and Optics </p>
+          <p> Introduction to Applied Mathematics </p>
+          <p> Introduction to Computer Science -- Python </p>
+          <p> The Art of Engineering </p>
+        
+        </div>
+
+        <div className = "term" id = "term3">
+          <h4> Fall Semester 2025 </h4>
+          <h5> term 3, to be determined </h5>
+
+          <p> Biology I </p>
+          <p> Introduction to Quantum and Mechanical Waves </p>
+          <p> Introduction to Electrical Engineering </p>
+          <p> Music Humanities </p>
+          <p> Neuroscience Elective Course </p>
+        
+        </div>
+
+        </div>
+
       </section>
 
       <section id="involvements">
