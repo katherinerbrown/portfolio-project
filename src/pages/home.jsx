@@ -4,23 +4,21 @@ function Home(){
     return(
         <>
         <div className='homePage'>  
-          <br></br>
-          <br></br>
-        <div className = 'namebox'>
-          <h1><span id="firstName">KATHERINE</span> <span id="lastName">BROWN</span></h1>
-          <h2 id = 'description'>Research  |  Innovation  |  Entrepreneurship </h2>
+        <img src="public/uploads/line-gradient1.png" alt="art" id="home-graphic" />
+        <div className="nameBox">
+        <h1 id="homeName">Katherine Brown </h1>
+        <h2 id="description">neural engineering student at Columbia University</h2>
+        </div>
         </div>
 
-        <div id = 'transition'></div>
 
 
-        <section id="about" className="about-page">
+        <div id="about" className="about-page">
         <div className="image-container">
         <h1 id="aboutme">About Me</h1>
 
-            <img src="public/uploads/backgradient.png" alt="Upper Right Image" className="image back" />
+            <img src="public/uploads/line-gradient2.png" alt="Upper Right Image" className="image back" />
             <img src="public/uploads/headshot.jpg" alt="Middle Image" className="image middle" />
-            <img src="public/uploads/frontgradient.png" alt="Bottom Left Image" className="image front" />
         
           <nav class="about-nav">
           <ul>
@@ -34,7 +32,7 @@ function Home(){
           </nav>
         <h2 id = "interests-title">Interests</h2>
         </div>
-        </section>
+        </div>
       
       
       <div class="about-sections">
@@ -257,7 +255,7 @@ function Home(){
 
       
       </div>
-      </div>
+      
                  
         </>
     )

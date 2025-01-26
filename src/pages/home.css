@@ -1,92 +1,116 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Poppins:wght@300;500;700&family=Roboto+Mono:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Oxanium:wght@200..800&family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nobile:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
 
 :root {
-  --perry-accent: #394b9d;
-  --navy-accent: #0f1638;
-  --berry-accent: #940641;
-  --green-accent: #78f0ae;
   --text-color: #f2f2f2;
-  --light-color: #82d1fe;
-  --background-color: #03030c;
+  --background-color: black;
+
+  --deep-purple: #1c1d2f;
+  --medium-purple: #435074;
+
+  --slate-blue: #7591a5;
+  --light-blue: #b8ccda;
+
+  --taupe: #969293;
 }
 
 body {
   margin: 0 auto;
-  font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
 }
-
 .homePage {
-  display: flex;             /* Enable flexbox for centering */
-  flex-direction: column; 
-  justify-content: flex-start;   /* Horizontally center children */
-  align-items: center;       /* Vertically center children */
-  height: 100vh;             /* Full viewport height */
-  width: 100vw;              /* Full viewport width */
-  margin: 0;
-  padding: 50px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full height of the viewport */
+  width: 100vw; /* Full width of the viewport */
+  margin: 0; /* Remove margin */
+  padding: 0; /* Remove padding */
   box-sizing: border-box;
-
-  background-image: url('public/homeBG.png'); /* Path to your image */
-  background-attachment: fixed;      /* Parallax effect */
-  background-position: center bottom; /* Center the image */
-  background-size: cover;           /* Ensure the image covers the whole area */
-  background-repeat: no-repeat;     /* Avoid repeating the image */
-  z-index: -1;  
-  max-height: 100vh; 
+  background-color: black;
+  overflow: hidden; /* Ensure no extra scrolling space */
+  z-index: 0;
 }
 
 .nameBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  text-align: center;
-  width: 80%;                /* Span 80% of the page width */
-  padding: 10px;             /* Optional: Add some inner spacing */
-  box-sizing: border-box;
-  padding-top: 50px;
-  margin-top: 50px;
-  position: relative;
-  z-index: 1; 
-}
-      #firstName {
-        color: var(--text-color);
-        font-size: 9rem;
-        font-weight: 300;
-        margin-bottom: 0 auto;
-      }
-      #lastName {
-        color: #281f8d;
-        font-size: 9rem;
-        font-weight: 300;
-        margin-bottom: 0 auto;
-
-      }
-      #description {
-        text-align: center;
-        font-size: 1.5rem;
-        font-weight: 400;
-        margin-top: 10px;
-        font-family: 'Space Grotesk', 'serif';
-        color: var(--light-color);
-      }
-
-#transition {
-  width: 100vw;
-  height: 20vh;
-  background: linear-gradient(to bottom, black, var(--background-color));
+  width: max-content;
+  height: auto; /* Let height adjust to content */
+  position: absolute;
+  top: 30%; 
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Offset horizontal centering */
+  z-index: 2;
+  background: transparent;
 }
 
-.about-page {
-  width: 100vw;
-  margin-top: 40vh; /* Push About section further down */
-  min-height: 100vh;  /* Ensures that the About section takes at least the height of the screen */
-  z-index: 1; 
-  position: relative;
-  background-color: var(--background-color);
-  padding-top: 0;
-  padding-bottom: 20px;
-}
+    #homeName {
+      font-size: 7rem; 
+      color: var(--text-color);
+      font-weight: 400;
+      margin: 0;
+      z-index: 2;
+      position: relative; 
+      display: inline-block; /* Prevent full-width block behavior */
+    }
+
+    #description {
+      text-align: right; 
+      font-size: 1.5rem;
+      font-weight: 400;
+      font-family: 'Space Grotesk', serif;
+      color: var(--light-blue);
+      text-transform: none;
+      right: 0;
+      top: 7.5rem;
+      display: inline-block;
+      position: absolute; /* Position relative to the nameBox */
+    }
+    
+    #home-graphic {
+      position: absolute;
+      top: 65%;
+      left: 38%; /* Center horizontally */
+      width: 40%; 
+      height: auto;
+      z-index: 1; /* Send it behind the text */
+      opacity: 0.5; /* Subtle opacity for a background look */
+      pointer-events: none; /* Prevent interaction with the image */
+    }
+
+
+
+    /* Animation for the image to grow */
+    @keyframes grow {
+      0% {
+        transform: scale(1) translate(-50%, -50%);
+        opacity: 0.3;
+      }
+      100% {
+        transform: scale(1.1) translate(-50%, -50%);
+        opacity: 0.5;
+      }
+    }
+
+    /* Apply the animation to the home-graphic */
+    #home-graphic {
+      animation: grow 2s ease-in-out forwards;
+    }
+
+    
+    .about-page {
+      margin: 0; /* Remove margin */
+      padding: 0; /* Remove padding */
+      width: 100%; /* Full width */
+      min-height: 100vh; /* Minimum height to fit the screen */
+      box-sizing: border-box;
+      background-color: black;
+    }
+
 
 #aboutme {
   text-align: left;
@@ -102,7 +126,7 @@ body {
   margin-top: 20vh;
   width: 100%; /* Ensure the container takes up full width */
   height: 200vh; /* Set a height for the images container */
-  background: var(--background-color);
+  background: black;
   margin: 0 auto;
 }
 
@@ -119,8 +143,8 @@ body {
   right: 8%; /* Position at the right */
   height: auto; /* Maintain aspect ratio */
   z-index: 1;  /* Set behind the middle image */
-  width: 26%; 
-  height: 40%;
+  width: 30%; 
+  height: auto;
 }
 
 /* Middle image */
@@ -133,14 +157,6 @@ body {
   z-index: 2;  /* Set it above the back image */
 }
 
-/* Front image (bottom-left image) */
-.image.front {
-  bottom: 25%; /* Position at the bottom */
-  left: 7%;   /* Position at the left */
-  width: 28%; 
-  height: 30%; 
-  z-index: 3;  /* Set it on top */
-}
 
 .about-nav {
   margin-top: 30px; /* Position directly under #aboutme */
@@ -180,7 +196,7 @@ body {
 }
 
 .about-nav a:hover {
-  color: var(--berry-accent); /* Highlight on hover */
+  color: var(--medium-purple); /* Highlight on hover */
   transform: scale(1.05); /* Add subtle hover effect */
 }
 
@@ -357,7 +373,7 @@ section h2 {
     font-family: 'Space Grotesk', 'serif'; 
     text-transform: uppercase;          
     font-weight: 400; 
-    color: var(--perry-accent);
+    color: var(--medium-purple);
     margin-bottom: 1rem;
   }
 
@@ -407,11 +423,6 @@ section h2 {
     margin: 0%;
   }
 
-  .club {
-    max-width: 25%;
-    border: white;
-    border-width: 1px;
-  }
 
   .club h4{
     font-size: 2.0rem;
@@ -434,7 +445,7 @@ section h2 {
     line-height: 1.2rem;
     text-transform: uppercase;          
 
-    color: var(--teal-accent);
+    color: var(--medium-purple);
   }
 
   .involve-section2{
@@ -493,7 +504,7 @@ section h2 {
   }
 
   .skills-text h5{
-    color: var(--light-color);
+    color: var(--light-blue);
     font-family: 'Space Grotesk', 'serif';
     font-weight: 400;
     font-size: 1.5rem;
@@ -545,7 +556,7 @@ section h2 {
   text-align: left;
   margin-left: 0;
   margin-bottom: 4rem;
-  color: var(--light-color);
+  color: var(--light-blue);
 }
 
 /* Content blocks */
@@ -580,7 +591,7 @@ section h2 {
 
 .content-right {
   flex-direction: row; 
-  justify-content: rightt;
+  justify-content: right;
 }
 .content-right .text {
   margin-right: 7%;
@@ -618,7 +629,7 @@ section h2 {
   margin-top: 0.5rem;
   font-size: 0.9rem;
   text-align: center;
-  color: var(--perry-accent);
+  color: var(--slate-blue);
 }
 
 #transition-blurb {
@@ -631,7 +642,7 @@ section h2 {
 
 custom-icon:hover {
   transform: scale(1.1); /* Slightly enlarge on hover */
-  filter: drop-shadow(4px 8px 10px var(--green-accent));
+  filter: drop-shadow(4px 8px 10px var(--slate-blue));
 }
 
 
