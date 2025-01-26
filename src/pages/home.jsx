@@ -3,6 +3,7 @@ import './home.css'
 function Home(){
     return(
         <>
+        <div id = "fullPage">
         <div className='homePage'>  
         <img src="public/uploads/line-gradient1.png" alt="art" id="home-graphic" />
         <div className="nameBox">
@@ -22,7 +23,7 @@ function Home(){
         
           <nav class="about-nav">
           <ul>
-          <li><a href="#interests-title">Interests</a></li>
+          <li><a href="#interests">Interests</a></li>
           <li><a href="#education">Education</a></li>
           <li><a href="#involvements">Involvements</a></li>
           <li><a href="#skills">Skills</a></li>
@@ -30,16 +31,32 @@ function Home(){
 
           </ul>
           </nav>
-        <h2 id = "interests-title">Interests</h2>
         </div>
         </div>
       
       
       <div class="about-sections">
     
-      <section id="interests">
+      <section className = "flex-section" id="interests">
+      <div className = "section-text">
         <h2>Interests</h2>
-        <p id = "temp" >This is the interests section. Add your content here.</p>
+        <p> My passion lies at the <span id = "callout-a"> intersection of health and technology </span>, fueled by a deep interests in 
+        <span id = "callout-b"> neuroscience </span>,     
+        <span id = "callout-b"> cognitive science </span>,
+        <span id = "callout-b"> business </span>, and
+        <span id = "callout-b"> public health policy</span>. </p>
+        <p> My long-term focus is on <span id = "callout-a"> research, innovation, and entrepreneurship</span>, with a goal of developing neural 
+          technologies to enhance cognition, regulate the nervous system, and treat neurological disorders.</p>
+        <p> During my undergraduate years, I aim to explore diverse professional environments within the health and life
+           sciences industry, including research institutions, biotech startups, and large corporations. </p>
+        <p> Throughout the academic year—and with greater focus during the summer—I am eager to gain experience and 
+          contribute in roles spanning laboratory work, project management, and industry research and operations. </p>
+      </div>
+
+      <div className = "section-graphic">
+      <img src="public/uploads/line-loop1.png" alt="art"/>
+      </div>      
+      
       </section>
 
       <section id="education">
@@ -49,8 +66,6 @@ function Home(){
           <div className = "college">
           <h3 id = "school"> Columbia University </h3>
           <h5 id = "subschool"> The Fu Foundational School of Engineering and Applied Science </h5>
-          <h5 id = "subschool"> SEAS Class of 2028 </h5>
-
           
           <h4 id = "ed"> Major </h4>
           <h5> Biomedical Engineering, B.S.</h5>
@@ -63,8 +78,8 @@ function Home(){
           </div>
 
           <div className = "photo">
-          <img src="public/uploads/campus.jpg" alt="Low Library at Columbia Univeristy" />
-          <h5 id = "nyc"> New York City, New York </h5>
+          <img src="public/uploads/campus.jpg" alt="Low Library at Columbia Univeristy" id="low-library" />
+          <h5 className = "caption"> New York City, New York </h5>
           </div>
         </div>
 
@@ -112,49 +127,40 @@ function Home(){
       </section>
 
       <section id="involvements">
-        <h2>Involvements</h2>
-        <h3 id = "clubs-onc"> On Campus </h3>
-        
-        <div className = "involve-section"> 
-            
+        <div className = "flex-section" id = "involve-flex">
+        <div className = "section-text" id = "involve-section-text"> 
+        <h2 id = "involvement-title"> Involvement</h2>
             <div className = "club" id = "bmes">
-            <h4> BMES</h4>
+            <a href="https://bmesatcolumbia.wixsite.com/columbia-bmes" target="_blank" rel="noopener noreferrer" id = "in-link">BMES</a>
             <p> Columbia's Biomedical Engineering Society chapter </p>
-            <a href="https://bmesatcolumbia.wixsite.com/columbia-bmes" target="_blank" rel="noopener noreferrer" id = "in-link">Columbia BMES Page</a>
             </div>
 
             <div className = "club" id = "cwbs">
-            <h4> CWBS</h4>
+            <a href="https://www.columbiawomensbusinesssociety.org/" target="_blank" rel="noopener noreferrer" id = "in-link">CWBS</a>
             <p> Columbia Women's Business Society  </p>
-            <a href="https://www.columbiawomensbusinesssociety.org/" target="_blank" rel="noopener noreferrer" id = "in-link">CWBS Page</a>
             </div>
 
             <div className = "club" id = "jadenet">
-            <h4> JADE </h4>
-            <p> Jumpstarting Aspiring Developes and Entrepreneurs  </p>
-            <a href = "https://www.cc-seas.columbia.edu/jade" target="_blank" rel= "noopener noreferrer" id = "jade-link"> JADE Program Page</a>
+            <a href = "https://www.cc-seas.columbia.edu/jade" target="_blank" rel= "noopener noreferrer" id = "jade-link"> JADE Program </a>
+            <p> Jumpstarting Aspiring Developes and Entrepreneurs Program at Columbia </p>
             </div>
 
-        </div>
-
-        <h3 id = "clubs-offc"> Off Campus </h3>
-        
-        <div className = "involve-section2"> 
             <div className = "club" id = "aauw">
-            
-            <a href="https://ore-ca.aauw.net/" target="_blank" rel="noopener noreferrer" id = "aauw-link">AAUW Home Chapter</a>
-
+            <a href="https://ore-ca.aauw.net/" target="_blank" rel="noopener noreferrer" id = "aauw-link">AAUW</a>
+            <p> American Association of University Women, Oakdale-Riverbank-Escalon Chapter</p>
             </div>
+
             <div className = "club" id = "4h">
-
-            <a href = "https://4halameda.ucanr.edu/4-h_club_contacts/" target="_blank" rel="noopener noreferrer" id = "4h-link">Alameda Coounty 4-H Page</a>
-            </div>
-            <div className = "club" id = "blank">
-
-              <p> blank section </p>
-            </div>
+            <a href = "https://4halameda.ucanr.edu/4-h_club_contacts/" target="_blank" rel="noopener noreferrer" id = "4h-link"> Alameda County 4-H</a>
+            <p> Crane Ridge 4-H Club in Alameda County, CA </p>
+            </div>  
         </div>
 
+        <div className = "section-graphic" id = "involve-graphic">
+        <img src="public/uploads/line-gradient3.png" alt="art" id="l3"/>
+        </div>
+
+        </div>
       </section>
 
       <section id="skills">
@@ -172,15 +178,14 @@ function Home(){
           <h4 > Laboratory  </h4>
           <h5> cell culture, staining, separation, identification </h5>
           <h5> CRISPR Cas-9 gene kock-in/out, gel electrophoresis </h5>
-          <h5> project organization, lab log documentation, presentation </h5>
 
           <h4 > Speech & Writing  </h4>
           <h5> technical writing, op-ed pieces, open source research </h5>
           <h5> prepared public speaking, cooperative marketing, impromptu </h5>
 
           <h4 > Business & Entrepreneurial</h4>
-          <h5> project management, marketing strategy developmment, industry research </h5>
-          <h5> record-keeping, financial accounting, budget-constraint development </h5>
+          <h5> project management, marketing, industry research </h5>
+          <h5> record-keeping, budget development, purchase orders </h5>
 
           <h4 > Research  </h4>
           <h5> academic research, medical journalism, research synthesis</h5>
@@ -188,12 +193,15 @@ function Home(){
           </div>
 
           <div className = "skills-photo">
-        
+
+          <div className = "photo-block"> 
           <img src="public/uploads/staining.jpg" alt="gram staining 3 samples" />
-          <h5 id = "nyc"> gram-stained slide, ap biology lab </h5>
-         
+          <h5 className = "caption"> gram-stained slide, ap biology lab </h5>
+          </div>
+          <div className = "photo-block"> 
           <img src="public/uploads/gradspeech.jpg" alt="graduation speech" />
-          <h5 id = "nyc"> Valedictory Address, OHS Class of 2024 </h5>
+          <h5 className = "caption"> Valedictory Address, OHS Class of 2024 </h5>
+          </div>
           </div>
           
 
@@ -253,7 +261,7 @@ function Home(){
   </section>
 
 
-      
+  </div>
       </div>
       
                  
